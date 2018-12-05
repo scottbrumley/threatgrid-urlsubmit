@@ -2,7 +2,7 @@
   "name": "node-red-contrib-threatgrid-urlsubmit",
   "version": "0.0.1",
   "author": "Scott Brumley",
-  "private": true,
+  "private": false,
   "node-red": {
     "nodes": {
       "threatgrid-urlsubmit": "threatgrid-urlsubmit.js"
