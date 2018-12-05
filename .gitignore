@@ -69,3 +69,5 @@ typings/
 /routes/
 /views/
 /node_modules/
+/package-lock.json
+/threatgrid-urlsubmit.iml
