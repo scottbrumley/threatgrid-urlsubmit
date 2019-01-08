@@ -3,9 +3,7 @@
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            name: {value:"Threat Grid URL Submit"},
-            //url: {value:""},
-            apikey: {value:"",required: true, type: "password"}
+            name: {value:"Threat Grid URL Submit"}
         },
         inputs:1,
         outputs:1,
@@ -21,15 +19,11 @@
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-row">
-        <label for="node-input-apikey"><i class="icon-tag"></i> API Key</label>
-        <input type="password" id="node-input-apikey" placeholder="APIKey">
-    </div>
+
 </script>
 
 <script type="text/x-red" data-help-name="threatgrid-urlsubmit">
     <p>A node that submits a URL to Cisco Threat Grid</p>
-    <strong>Input:</strong>  A URL of type string<br>
+    <strong>Input:</strong>  A URL of type string (i.e. msg.url) & Cisco Threat Grid API Key (i.e. msg.apikey)<br>
     <strong>Output:</strong>  JSON returned by Cisco Threat Grid<br>
-    <strong>Requirement:</strong>  Threat Grid API Key
 </script>

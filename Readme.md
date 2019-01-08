@@ -13,6 +13,7 @@ node-red
 
 ## Testing Code
 ``` 
+cd into node red path usually ~/.node-red
 npm install /path to project directory/threatgrid-urlsubmit 
 ```
 

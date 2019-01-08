@@ -6,7 +6,7 @@ module.exports = function(RED) {
         var node = this;
         node.on('input', function(msg) {
             submitURL = encodeURIComponent(msg.url);
-            urlStr = "https://panacea.threatgrid.com/api/v2/search/submissions?q=" + submitURL + "&api_key=" + node.apikey;
+            urlStr = "https://panacea.threatgrid.com/api/v2/search/submissions?q=" + submitURL + "&api_key=" + msg.apikey;
 
             //msg.payload = urlStr;
             //node.send(msg);
