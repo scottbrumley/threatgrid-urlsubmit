@@ -1,7 +1,9 @@
 {
   "name": "node-red-contrib-threatgrid-urlsubmit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Scott Brumley",
+  "description"  : "A node that will submit URLs to Cisco Threat Grid for analysis.",
+  "keywords": [ "node-red" ],
   "node-red": {
     "nodes": {
       "threatgrid-urlsubmit": "threatgrid-urlsubmit.js"
