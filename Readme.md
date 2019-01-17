@@ -1,5 +1,6 @@
 # McAfee DXL Cisco Threat Grid Integration
 
+This Node accepts and URL and submits it to Cisco Threat Grid
 
 ## Running A Dev Broker
 ```
