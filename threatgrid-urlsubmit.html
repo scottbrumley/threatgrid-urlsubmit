@@ -1,17 +1,45 @@
 <script type="text/javascript">
+    RED.nodes.registerType('threat-grid',{
+        category: 'config',
+        defaults: {
+            apikey: {value:"api key",required:true},
+            scanwait: {value:1,required:true,validate:RED.validators.number()}
+        },
+        label: function() {
+            return this.apikey+":"+this.scanwait;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="threat-grid">
+    <div class="form-row">
+        <label for="node-config-input-apikey"><i class="icon-bookmark"></i>API Key</label>
+        <input type="text" id="node-config-input-apikey">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-scanwait"><i class="icon-bookmark"></i>Scan Wait</label>
+        <input type="text" id="node-config-input-scanwait">
+    </div>
+</script>
+
+
+<script type="text/javascript">
     RED.nodes.registerType('threatgrid-urlsubmit',{
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            name: {value:"Threat Grid URL Submit"}
+            name: {value:"Threat Grid URL Submit"},
+            api: {type:"threat-grid", required: true}
+
         },
         inputs:1,
         outputs:1,
         icon: "file.png",
         label: function() {
-            return this.name||"threatgrid-urlsubmit";
+            return this.name||'Threat Grid URL Submit';
         }
     });
+
 </script>
 
 <script type="text/x-red" data-template-name="threatgrid-urlsubmit">
@@ -19,7 +47,10 @@
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-
+    <div class="form-row">
+        <label for="node-input-api"><i class="icon-tag"></i>API</label>
+        <input type="text" id="node-input-api" placeholder="API">
+    </div>
 </script>
 
 <script type="text/x-red" data-help-name="threatgrid-urlsubmit">
